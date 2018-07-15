@@ -1,0 +1,21 @@
+body {
+    background-image: url("../images/grass.jpg");
+    background-position: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.container { 
+    margin-top: 100px;
+}
+
+.row {
+    border: 1px black solid;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+h1 { 
+    text-align: center;
+}
+
