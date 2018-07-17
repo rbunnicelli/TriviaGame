@@ -1,5 +1,6 @@
 $(document).ready(function() {
-    var questions = [{
+    var trivia = [
+    {
         question: "Which NBA team won the most championships in the 2000's?",
         answers: ["San Antonio Spurs", "Los Angeles Lakers", "Boston Celtics", "Miami Heat"],
         correct: "Los Angeles Lakers",
@@ -54,4 +55,17 @@ $(document).ready(function() {
         /* 2000, 2009*/
     },
     ]
+function startGame() {
+    for (i = 0; i<trivia.length; i++) {
+        $("#QandA").append("<br>" + trivia[i].question + "<br>" + "<br>" + trivia[i].answers + "<br>");
+        
+    }
 }
+console.log(startGame);
+
+$("#start-btn").click(function() {
+    $("#startGame").hide();
+    $("#triviaGame").show();
+    startGame();
+});
+})
