@@ -44,7 +44,7 @@ $(document).ready(function() {
         correct: "Michael Phelps",
     },
     {
-        question: "Which Division 2 College football team defeated Michigan in stunning fashion",
+        question: "Which Division 2 College football team defeated Michigan in stunning fashion?",
         answers: ["Appalachian State", "Colorado State", "Ball State", "Clemson"],
         correct: "Appalachian State",
     },
@@ -57,8 +57,7 @@ $(document).ready(function() {
     ]
 function startGame() {
     for (i = 0; i<trivia.length; i++) {
-        $("#QandA").append("<br>" + trivia[i].question + "<br>" + "<br>" + trivia[i].answers + "<br>");
-        
+        $("#QandA").append("<br>" + trivia[i].question + "<br>");
     }
 }
 console.log(startGame);
