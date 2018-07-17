@@ -57,7 +57,8 @@ $(document).ready(function() {
     ]
 function startGame() {
     for (i = 0; i<trivia.length; i++) {
-        $("#QandA").append("<br>" + trivia[i].question + "<br>");
+        $("#QandA").append("<br>" + trivia[i].question + "<br>" + "<br>" + "<p class='answers'>" + trivia[i].answers + "</p>" + "<br>");
+        $(trivia[i].answers).addClass("answers")
     }
 }
 console.log(startGame);
