@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    //array of objects containing question, choices, correct answer
     var trivia = [
     {
         question: "Which NBA team won the most championships in the 2000's?",
@@ -55,17 +56,61 @@ $(document).ready(function() {
         /* 2000, 2009*/
     },
     ]
+
+//scoring variables
+var correct = 0;
+var incorrect = 0;
+var notGuessed = 0;
+
+//variables to set timer
+var number = 60;
+var intervalID;
+
+//function to clear intervalID so cant have multiple instances. Sets timer to decrease by 1 second
+function run() {
+    clearInterval(intervalID);
+    intervalID = setInterval(timer, 1000);
+}
+
+//function to run the timer, show on page. Hide game and show ran out of time screen if player runs out of timme
+function timer() {
+    number --;
+    $("#timer").html("<h2>" + number + "</h2>");
+    if ( number === 0) {
+        $("#triviaGame").hide();
+        $("#noTime").show();
+    }
+}
+
+//function that shows each question and choices associated with it. Apply class to answers so can style it differently
 function startGame() {
     for (i = 0; i<trivia.length; i++) {
         $("#QandA").append("<br>" + trivia[i].question + "<br>" + "<br>" + "<p class='answers'>" + trivia[i].answers + "</p>" + "<br>");
-        $(trivia[i].answers).addClass("answers")
+        $(trivia[i].answers).addClass("answers");
     }
 }
-console.log(startGame);
 
+//function on start button click that hides the start menu, starts timer and shows trivia questions
 $("#start-btn").click(function() {
     $("#startGame").hide();
     $("#triviaGame").show();
     startGame();
+    run();
+    timer();
 });
+
+//if submit button clicked, hide triviaGame and show the scoreScreen
+$("#submit-btn").click(function() {   
+    $("#triviaGame").hide();
+    $("#scoreScreen").show();
+})
+
+//once you finish you can try again. Restart the game over
+$("#restart-btn").click(function() {
+    $("#scoreScreen").hide();
+    $("#triviaGame").show();
+    startGame();
+    run();
+    timer();
+})
 })
