@@ -25,6 +25,7 @@ h1 {
     text-align: center;
     font-family: 'Chela One', cursive;
     font-size: 50px;
+    margin-bottom: 20px;
 }
 
 p { 
@@ -57,4 +58,40 @@ p {
 .answers {
     color: white;
 
+}
+
+#submit-btn {
+    text-align: center;
+    background-color: green;
+    border-color: black;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+#timer {
+    text-align: center;
+    font-size: 40px;
+    color: maroon;
+}
+
+#noTime {
+    display: none;
+    margin-top: 100px;
+    border: 3px black solid;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#scoreScreen {
+        display: none;
+        margin-top: 100px;
+        border: 3px black solid;
+        background-color: rgba(255, 255, 255, 0.5);
+}
+
+#restart-btn {
+    text-align: center;
+    background-color: green;
+    border-color: black;
+    margin-top: 8px;
+    margin-bottom: 10px;
 }
