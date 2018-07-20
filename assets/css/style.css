@@ -93,7 +93,7 @@ p {
     text-align: center;
     background-color: green;
     border-color: black;
-    margin-top: 8px;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
@@ -105,4 +105,10 @@ label {
 
 .myGiphy {
     text-align: center;
+    padding-bottom: 20px;
+}
+
+.percentage {
+    font-size: 40px;
+    color: rgb(20,20,172);
 }
