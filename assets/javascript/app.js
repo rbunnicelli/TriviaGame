@@ -70,7 +70,7 @@ $(document).ready(function() {
     {
         question: "The New York Yankees won how many World Series in the 2000's?",
         answers: ["0", "4", "2", "1"],
-        correct: "73",
+        correct: "2",
         name: "yanks",
         divClass: ".yanks"
         /* 2000, 2009*/
@@ -82,7 +82,6 @@ var labels = ["first", "second", "third", "fourth"];
 //scoring variables
 var correct = 0;
 var incorrect = 0;
-var notGuessed = 0;
 
 //variables to set timer
 var number = 60;
@@ -133,12 +132,10 @@ var score = function() {
         } else {
             incorrect++;
             $(".incorrectAnswers").html("Incorrect: " + incorrect); 
-        //if no button selected add to not guessed
-        } if ($("input[type='radio'][name=" + trivia[i].name + "].null")) {
-            notGuessed++;
-            $(".notGuessed").html("Not Guessed: " + notGuessed); 
         }
     }
+    //shows the user score as a percentage
+    $(".percentage").html(correct * 10 + "%");
 }
 
 //function on start button click that hides the start menu, starts timer and shows trivia questions
