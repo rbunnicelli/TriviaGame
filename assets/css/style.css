@@ -45,6 +45,7 @@ p {
 #triviaGame {
     display: none;
     margin-top: 100px;
+    margin-bottom: 100px;
     border: 3px black solid;
     background-color: rgba(255, 255, 255, 0.5);
 }
@@ -56,7 +57,7 @@ p {
 }
 
 .answers {
-    color: white;
+    color: black;
 
 }
 
@@ -71,7 +72,7 @@ p {
 #timer {
     text-align: center;
     font-size: 40px;
-    color: maroon;
+    color: rgb(20, 20, 172);
 }
 
 #noTime {
@@ -94,4 +95,14 @@ p {
     border-color: black;
     margin-top: 8px;
     margin-bottom: 10px;
+}
+
+label {
+    color: rgb(20, 20, 172);
+    padding: 10px;
+    margin-top: 8px;
+}
+
+.myGiphy {
+    text-align: center;
 }
